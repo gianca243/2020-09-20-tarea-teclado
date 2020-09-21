@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Tareas</title>
+</head>
+<body>
+  <div class="container cardC p-3" id="contenedor">
+    <div class="row">
+      <div class="col-3">
+        <h2 class="col-12" id="nombre">
+          Hi
+        </h2>
+        <img class="col-12 p-3" src="https://microhealth.com/assets/images/illustrations/personal-user-illustration-@2x.png" alt="">
+        <div class="col-12">
+          <button onclick="salir()" type="button" class="btn botonP p-4 container">Salir</button>
+        </div>
+      </div>
+      <div class="col-9">
+        <h2 class="col-12">
+          Tareas
+        </h2>
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Tareas por realizar</th>
+              </tr>
+            </thead>
+            <tbody id="contenidoTabla">
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container cardC p-3" id="contenedor">
+    <h1>Teclado</h1>
+    <br>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="teclado" placeholder="Hacer la cena...">
+      <div class="input-group-append">
+        <button onclick="enTabla()" class="btn btn-outline-secondary botonC text-white" type="button" id="button-addon2">Agregar Tarea</button>
+      </div>
+    </div>
+    <br>
+    <div id="caja">
+      <div class="row d-flex justify-content-around">
+        <button type="button" class="btn botonC p-4">Q</button>
+        <button type="button" class="btn botonC p-4">W</button>
+        <button type="button" class="btn botonC p-4">E</button>
+        <button type="button" class="btn botonC p-4">R</button>
+        <button type="button" class="btn botonC p-4">T</button>
+        <button type="button" class="btn botonC p-4">Y</button>
+        <button type="button" class="btn botonC p-4">U</button>
+        <button type="button" class="btn botonC p-4">I</button>
+        <button type="button" class="btn botonC p-4">O</button>
+        <button type="button" class="btn botonC p-4">P</button>
+      </div>
+      <br>
+      <div class="row d-flex justify-content-around">
+        <button type="button" class="btn botonC p-4">A</button>
+        <button type="button" class="btn botonC p-4">S</button>
+        <button type="button" class="btn botonC p-4">D</button>
+        <button type="button" class="btn botonC p-4">F</button>
+        <button type="button" class="btn botonC p-4">G</button>
+        <button type="button" class="btn botonC p-4">H</button>
+        <button type="button" class="btn botonC p-4">J</button>
+        <button type="button" class="btn botonC p-4">K</button>
+        <button type="button" class="btn botonC p-4">L</button>
+        <button type="button" class="btn botonC p-4">Ñ</button>
+      </div>
+      <br>
+      <div class="row d-flex justify-content-around">
+        <button type="button" class="btn botonC p-4">Z</button>
+        <button type="button" class="btn botonC p-4">X</button>
+        <button type="button" class="btn botonC p-4">C</button>
+        <button type="button" class="btn botonC p-4">V</button>
+        <button type="button" class="btn botonC p-4">B</button>
+        <button type="button" class="btn botonC p-4">N</button>
+        <button type="button" class="btn botonC p-4">M</button>
+      </div>
+      <br>
+      <div class="row d-flex justify-content-around">
+        <div class="col-8">
+          <button type="button" class="container btn botonC p-4">_</button>
+        </div>
+        <div class="col-4">
+          <button type="button" class="container btn botonC p-4"> <- </button>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+  <script src="../js/agregarTarea.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

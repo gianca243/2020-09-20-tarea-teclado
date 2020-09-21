@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Login</title>
+</head>
+<body>
+  
+  <div class="container-sm pt-4">
+    <div class="row">
+        <ul class="center-block nav nav-pills mb-3 mx-0 mb-0 mt-1 col-12 d-flex justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link botonC  ml-2 " id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Ingresar</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link botonC  ml-2" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Registrate</a>
+            </li>
+        </ul>
+        <div class="tab-content container-sm col-lg-6 col-md-8 col-xs-12" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="container-sm">
+                    <div class="card text-center ">
+                        <div class="card-header  cardC">
+                            Iniciar Sesion
+                        </div>
+                        <div class="card-body  cardC">
+                            <form action="./pages/task.html" id="login" name="login" onsubmit="return validarLogin()">
+                                <div class="form-group">
+                                    <label for="usuario">Usuario</label>
+                                    <input type="text" class="form-control" id="usuario" placeholder="Usuario" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contrasena">Password</label>
+                                    <input type="password" class="form-control" id="contrasena" placeholder="Password">
+                                </div>
+                                <div class="form-group form-check text-left">
+                                    <input type="checkbox" class="form-check-input" id="recordar">
+                                    <label class="form-check-label" for="recordar ">Recordarme</label>
+                                </div>
+                                <button type="submit" class="btn botonC" style="color:rgb(255, 255, 255); ">Registrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="col-12 ">
+                    <div class="card text-center">
+                        <div class="card-header cardC">
+                            Registro Nuevos Usuarios
+                        </div>
+                        <div class="card-body cardC">
+                            <form action="./index.html" id="registro" name="registro" onsubmit="return validarRegistro()">
+                                <div class="row">
+                                    <div class="col-xs-12 col-lg-6 form-group">
+                                        <label for="name">Nombre</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Nombre">
+                                    </div>
+                                    <div class="col-xs-12 col-lg-6 form-group">
+                                        <label for="apellido">Apellido</label>
+                                        <input type="text" class="form-control " id="apellido" placeholder="Apellido">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-lg-6 form-group">
+                                        <label for="usuario">Nombre Usuario</label>
+                                        <input type="text" class="form-control" id="usuario" placeholder="Usuario">
+                                    </div>
+                                    <div class="col-xs-12 col-lg-6 form-group">
+                                        <label for="nacimiento">Fecha Nacimiento</label>
+                                        <input type="date" class="form-control " id="nacimiento" placeholder="Repetir Contraseña">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12 col-lg-6 form-group">
+                                        <label for="contrasena">Contraseña</label>
+                                        <input type="password" class="form-control " id="contrasena" placeholder="Contraseña">
+                                    </div>
+                                    <div class="col-xs-12 col-lg-6 form-group">
+                                        <label for="contrasena2">Repetir contraseña</label>
+                                        <input type="password" class="form-control " id="contrasena2" placeholder="Repetir Contraseña">
+                                    </div>
+                                </div>
+                                <div class="form-group form-check text-left">
+                                    <input type="checkbox" class="form-check-input" id="terminos">
+                                    <label class="form-check-label" for="terminos ">Acepto los terminos y condiciones.</label>
+                                </div>
+                                <button type="submit" class="btn botonC" style="color:rgb(255, 255, 255); ">Registrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="alerta" tabindex="-1" role="dialog" aria-labelledby="alerta" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Alerta!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+          <div class="modal-body" id="mensaje-modal">
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+          </div>
+      </div>
+  </div>
+</div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>
+  <script src="./js/moment-with-locales.min.js"></script> 
+  <script src="./js/login.js"></script>
+  <script src="./js/registro.js"></script>
+</body>
+</html>
